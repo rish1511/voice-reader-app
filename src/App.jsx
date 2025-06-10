@@ -7,18 +7,18 @@ function App() {
   const [isListening, setIsListening] = useState(false);
   const [allNotes, setAllNotes] = useState("");
   const [Lang, setlang] = useState("English");
-//   // Step 1: Load saved notes
-// useEffect(() => {
-//   const savedNotes = JSON.parse(localStorage.getItem("voice-notes"));
-//   if (savedNotes && Array.isArray(savedNotes)) {
-//     setNotes(savedNotes);
-//   }
-// }, []);
+  // Step 1: Load saved notes
+useEffect(() => {
+  const savedNotes = JSON.parse(localStorage.getItem("voice-notes"));
+  if (savedNotes && Array.isArray(savedNotes)) {
+    setNotes(savedNotes);
+  }
+}, []);
 
-// // Step 2: Save notes every time they change
-// useEffect(() => {
-//   localStorage.setItem("voice-notes", JSON.stringify(notes));
-// }, [notes]);
+// Step 2: Save notes every time they change
+useEffect(() => {
+  localStorage.setItem("voice-notes", JSON.stringify(notes));
+}, [notes]);
 
 
   let recognition = useRef(null);
